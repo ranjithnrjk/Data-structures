@@ -142,15 +142,16 @@ if __name__ == "__main__":
 	# ll.Print()
 	ll = LinkedList()
 	ll.insert_values(["banana","mango","grapes","orange"])
+	ll.insert_at(500, 2)
 	ll.Print()
-	ll.insert_after_value("mango","apple") # insert apple after mango
-	ll.remove_by_value("orange") # remove orange from linked list
-	ll.Print()
-	ll.Print()
-	ll.remove_by_value("figs")
-	ll.Print()
-	ll.remove_by_value("banana")
-	ll.remove_by_value("mango")
-	ll.remove_by_value("apple")
-	ll.remove_by_value("grapes")
-	ll.Print()
+	# ll.insert_after_value("mango","apple") # insert apple after mango
+	# ll.remove_by_value("orange") # remove orange from linked list
+	# ll.Print()
+	# ll.Print()
+	# ll.remove_by_value("figs")
+	# ll.Print()
+	# ll.remove_by_value("banana")
+	# ll.remove_by_value("mango")
+	# ll.remove_by_value("apple")
+	# ll.remove_by_value("grapes")
+	# ll.Print()
