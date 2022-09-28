@@ -62,13 +62,41 @@ class DoublyLinkedList:
 			itr = itr.next
 			count += 1
 
-		print(count)
+		return count
+
+
+	def insert_values(self, data):
+		self.head = None
+		for i in data:
+			self.insert_at_end(i)
+
+
+	def insert_at(self, index, data):
+		if index < 0 or index > self.get_length():
+			raise Exception("Invalid index")
+			return
+
+		if index == 0:
+			self.insert_at_beginning(data)
+			return
+
+		itr = self.head
+		count = 0
+		while itr:
+			if count == index-1:
+				node = Node(data, itr.next, itr)
+				itr.next.prev = node
+				itr.next = node
+				break
+			itr = itr.next
+			count += 1
+
+
 
 
 if __name__ == '__main__':
 	ll = DoublyLinkedList()
-	ll.insert_at_end(4)
-	ll.insert_at_end(3)
-	ll.insert_at_end(2)
+	# ll.insert_values([*range(0,100,10)])
+	ll.insert_at(0, 500)
 	ll.Print()
-	ll.get_length()
+	print(ll.get_length())
